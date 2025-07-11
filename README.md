@@ -36,6 +36,13 @@ In our context, they:
 
 ---
 
+## 🔑 Intuitions
+
+* Marine biologist
+* LLM and text based game
+
+---
+
 ## 🔑 Key Concepts
 
 | Concept          | Definition                                                         |
