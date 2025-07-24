@@ -26,3 +26,6 @@
 * llama 3.2 (ollama local API)
 * 
 
+## Examples
+
+* https://github.com/rcalix1/AgentsAI/tree/main
