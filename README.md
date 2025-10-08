@@ -2,6 +2,7 @@
 
 * ( Agents )
 * AGS
+* AIML
 * link
 
 # AI Agents Masterclass — CrewAI & SmolAgents
