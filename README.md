@@ -1,7 +1,7 @@
-# The Future of Gen AI: Tools and media 
+# Agents AI: Tools and media 
 
 * ( Agents )
-* AGS
+* AGS - The Future of Gen AI: Tools and media 
 * AIML
 * AI for Business Intelligence and Analytics - Integration of AI tools and practical application
 
