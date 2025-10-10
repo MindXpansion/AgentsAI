@@ -3,7 +3,7 @@
 * ( Agents )
 * AGS
 * AIML
-* link
+* AI for Business Intelligence and Analytics - Integration of AI tools and practical application
 
 # AI Agents Masterclass — CrewAI & SmolAgents
 
