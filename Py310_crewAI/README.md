@@ -2,4 +2,4 @@
 
 * python 3.10
 * ollama
-* 
+* ollama run mistral:7b
