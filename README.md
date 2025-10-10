@@ -11,6 +11,193 @@ Welcome to the **AI Agents Masterclass**, where we explore how to build and orch
 
 ---
 
+# AI Agents for Business Intelligence and Automation
+
+
+
+---
+
+## 🎯 Overview
+
+This session explores how AI agents can automate business intelligence and analytics workflows using open-source frameworks. Through live Python demos and analogies, participants learn how to:
+
+* Understand what AI agents are and how they differ from chatbots
+* Set up **local LLMs** with **Ollama** (no cloud cost)
+* Use **CrewAI** to structure AI agents, tasks, and tools
+* Deploy multi-agent workflows (e.g., researcher + writer)
+* Connect AI agents with tools like web scraping and file operations
+
+---
+
+## 🧩 Core Concepts
+
+### 1. **AI Agents Defined**
+
+AI agents are autonomous systems that use large language models (LLMs) to perform goal-oriented tasks through reasoning, collaboration, and tool use.
+
+> **Analogy:** Like a marine biologist exploring the ocean — the LLM is the biologist, the code wrapper (CrewAI) is the wetsuit, and the tools (scrapers, search engines) are the instruments.
+
+---
+
+### 2. **Real-World Context**
+
+Modern enterprise platforms like **Slack (Salesforce)** and **Microsoft Teams** are integrating AI agents into daily workflows — introducing the idea of **digital coworkers** that can assist, summarize, and automate communication tasks.
+
+> Example: A fifth 'digital team member' in Slack who can research, summarize, and deliver insights on command.
+
+---
+
+## ⚙️ Tools and Frameworks
+
+| Tool / Library                | Purpose                                       |
+| ----------------------------- | --------------------------------------------- |
+| **Ollama**                    | Runs open-source LLMs like Llama 3.2 locally  |
+| **CrewAI**                    | Framework for defining and managing AI agents |
+| **SmolAgents (HuggingFace)**  | Alternative agent orchestration library       |
+| **Llama 3.2**                 | Open-source LLM by Meta, used via Ollama      |
+| **BrowserTool / ScraperTool** | Allows agents to retrieve data from the web   |
+
+---
+
+## 🧠 Session Flow
+
+### **1. Setting Up Ollama**
+
+* Download Ollama for Windows/Mac/Linux from [ollama.com/download](https://ollama.com/download)
+* Run: `ollama run llama3.2`
+* Acts as a **local API** (localhost:11434)
+* Use this to avoid cloud fees and latency
+
+---
+
+### **2. Installing CrewAI**
+
+```bash
+pip install crewai
+pip install crewai-tools
+```
+
+Import in Python:
+
+```python
+from crewai import Agent, Task, Crew
+from crewai.tools import ScrapeWebsiteTool
+```
+
+---
+
+### **3. Defining an Agent**
+
+```python
+researcher_agent = Agent(
+    role="Researcher",
+    goal="Find and summarize the latest AI news",
+    backstory="You are an AI analyst providing insights to the business.",
+    llm=Llm(model="llama3.2", base_url="http://localhost:11434")
+)
+```
+
+---
+
+### **4. Creating a Task**
+
+```python
+research_task = Task(
+    description="Conduct comprehensive research on the latest AI developments.",
+    expected_output="A concise report highlighting key AI breakthroughs.",
+    agent=researcher_agent
+)
+```
+
+---
+
+### **5. Launching a Crew**
+
+```python
+my_crew = Crew(agents=[researcher_agent], tasks=[research_task])
+result = my_crew.kickoff()
+print(result)
+```
+
+This creates and runs a single AI agent performing a defined task using Llama 3.2 locally.
+
+---
+
+## 🤖 Multi-Agent Example
+
+```python
+researcher = Agent(role="Researcher", goal="Gather information on black holes", ...)
+writer = Agent(role="Writer", goal="Create a humorous blog post about black holes", ...)
+
+research_task = Task(description="Find info on black holes", agent=researcher)
+writing_task = Task(description="Write a funny blog post based on the research", agent=writer)
+
+crew = Crew(agents=[researcher, writer], tasks=[research_task, writing_task], process="sequential")
+result = crew.kickoff(inputs={"topic": "black holes"})
+```
+
+**Output:**
+
+> *"The Mysterious World of Black Holes: A Humorous Guide"* — complete with playful analogies and witty commentary.
+
+---
+
+## 🔧 Tool Integration Example
+
+Use the `ScrapeWebsiteTool` to give your agent access to live web data:
+
+```python
+from crewai.tools import ScrapeWebsiteTool
+scraper = ScrapeWebsiteTool()
+context = scraper.run("https://en.wikipedia.org/wiki/Artificial_intelligence")
+
+agent = Agent(role="Educator", goal="Explain NLP using context from the web", llm=Llm(model="llama3.2"))
+task = Task(description="Based on the context, explain what NLP is.", agent=agent)
+crew = Crew(agents=[agent], tasks=[task])
+crew.kickoff(inputs={"context": context})
+```
+
+---
+
+## 💬 Common Questions
+
+| Question                              | Insight                                                                    |
+| ------------------------------------- | -------------------------------------------------------------------------- |
+| **Can we use ChatGPT instead?**       | Yes — replace Ollama with `OpenAI` API + token.                            |
+| **Can agents read files or syslogs?** | Yes, using file reader tools. Provide context as input.                    |
+| **Are tools secure?**                 | Some (like `eval`) pose security risks. Always sanitize inputs.            |
+| **Can multiple LLMs run?**            | You can create multiple Ollama instances or agents using different models. |
+| **Do prompts still matter?**          | Absolutely — role, goal, and backstory are crucial.                        |
+
+---
+
+## 🧩 Key Takeaways
+
+* AI agents represent **structured automation**, not just chatbots.
+* **Local-first AI** (Ollama + CrewAI) makes enterprise experimentation feasible.
+* **Multi-agent setups** mimic team workflows — researcher, writer, analyst, etc.
+* **Tools** (web, file, search) make agents capable of interacting with real-world data.
+* **Prompt engineering** remains the heart of quality agent behavior.
+
+---
+
+## 💡 Final Thoughts
+
+AI agents are the next layer of applied AI — bringing reasoning, delegation, and collaboration to automation. Frameworks like CrewAI make it accessible to small teams and educators alike.
+
+> “The book on AI agents is still being written — but you can already start contributing chapters.”
+
+---
+
+**Repository:** [github.com/rcalix1/AIagents](https://github.com/rcalix1/AIagents)
+
+**Instructor:** Ricardo Calix, PhD
+Professor of Computer Science, Purdue University Northwest
+[www.rcalix.com](https://www.rcalix.com)
+
+
+---
+
 ## 📘 Table of Contents
 
 1. [What Are AI Agents?](#what-are-ai-agents)
