@@ -187,13 +187,6 @@ AI agents are the next layer of applied AI — bringing reasoning, delegation, a
 
 > “The book on AI agents is still being written — but you can already start contributing chapters.”
 
----
-
-**Repository:** [github.com/rcalix1/AIagents](https://github.com/rcalix1/AIagents)
-
-**Instructor:** Ricardo Calix, PhD
-Professor of Computer Science, Purdue University Northwest
-[www.rcalix.com](https://www.rcalix.com)
 
 
 ---
