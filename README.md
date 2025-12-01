@@ -5,7 +5,7 @@
 * AIML
 * AI for Business Intelligence and Analytics - Integration of AI tools and practical application
 
-# AI Agents Masterclass — CrewAI & SmolAgents
+# AI Agents Masterclass — CrewAI and SmolAgents
 
 Welcome to the **AI Agents Masterclass**, where we explore how to build and orchestrate intelligent agents using **CrewAI** and **SmolAgents**.
 
