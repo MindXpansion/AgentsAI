@@ -9,6 +9,8 @@
 ## Andrew Ng - AI Agents
 
 * https://github.com/andrewyng/aisuite/tree/main
+* https://github.com/andrewyng/aisuite/blob/main/examples/agents/snake_game_generator.ipynb
+* https://github.com/andrewyng/aisuite/blob/main/examples/agents/world_weather_dashboard.ipynb
 
 
 # AI Agents Masterclass — CrewAI and SmolAgents
