@@ -6,6 +6,11 @@
 * AI for Business Intelligence and Analytics - Integration of AI tools and practical application
 * link
 
+## Andrew Ng - AI Agents
+
+* https://github.com/andrewyng/aisuite/tree/main
+
+
 # AI Agents Masterclass — CrewAI and SmolAgents
 
 Welcome to the **AI Agents Masterclass**, where we explore how to build and orchestrate intelligent agents using **CrewAI** and **SmolAgents**.
