@@ -5,6 +5,8 @@
 * AIML
 * AI for Business Intelligence and Analytics - Integration of AI tools and practical application
 * link
+* https://agents4science.github.io/curriculum.html
+* 
 
 ## Andrew Ng - AI Agents
 
